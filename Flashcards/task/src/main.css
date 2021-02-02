@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+.main-flex {
+    background-image: url("https://stepik.org/media/attachments/lesson/374893/world.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    padding: 6.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+}
+.card-flex{
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+
+}
+.item{
+    background-color: burlywood;
+    border-radius: 15px;
+    margin: 3px;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Sriracha', cursive;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    /*transition: all 1s linear;*/
+    /*transform-style: preserve-3d;*/
+    position: absolute;
+}
+.front{
+    z-index: 2;
+    /*transform: rotateY(180deg);*/
+    backface-visibility: hidden;
+}
+.back{
+    z-index: 1;
+    /*backface-visibility: hidden;*/
+    transform: rotateY(180deg);
+}
+.item:hover {
+    transform: rotateY(180deg);
+}
